@@ -13,6 +13,7 @@
 export default {
   async asyncData ({ params, $axios, payload }) {
     let post
+    console.log(payload)
     if (payload) {
       post = payload
       console.log('getting post', post.id, 'from payload')
