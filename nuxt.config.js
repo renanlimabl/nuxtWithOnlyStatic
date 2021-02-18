@@ -25,7 +25,11 @@ export default {
   generates: {
     async routes () {
       const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
-      return response.data.map(post => `posts/${post.id}`)
+      // return response.data.map(post => `posts/${post.id}`)
+      return response.data.map(post => ({
+        route: `post/${post.id}`,
+        payload: post
+      }))
       // return axios.get('https://jsonplaceholder.typicode.com/posts')
       //   .then((response) => {
       //     return response.data.map(post => `post/${post.id}`)
