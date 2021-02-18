@@ -1,4 +1,4 @@
-# nuxt-ssg
+# nuxt-ssg :D
 
 ## Build Setup
 
